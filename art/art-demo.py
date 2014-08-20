@@ -4,8 +4,6 @@ from tealight.art import (screen_width, screen_height)
 
 from github.daviesian.logo.lib import lib_func
 
-import urllib2
-
 print lib_func()
 
 print "This is art mode!"
