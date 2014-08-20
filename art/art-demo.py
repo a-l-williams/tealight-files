@@ -2,6 +2,10 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 
 from tealight.art import (screen_width, screen_height)
 
+from github.daviesian.logo.lib import lib_func
+
+print lib_func()
+
 print "This is art mode!"
 
 print screen_width
