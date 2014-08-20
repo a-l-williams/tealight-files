@@ -1,2 +1,2 @@
-from github.calintat.art import racetrack
-racetrack.draw_triangle(200,200,200,"blue")
+from github.calintat.art.racetrack import draw_triangle
+draw_triangle(200,200,200,"blue")
