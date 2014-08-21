@@ -1,5 +1,4 @@
 from github.calintat.art.racetrack import draw_triangle
-from github.lordvile018.art.racetrack import handle_keydown, handle_keyup
 from tealight.utils import github_load
 project_globals = github_load("a-l-williams", "art", "project-globals")
 key_handlers = github_load("lordvile018", "art", "racetrack")
