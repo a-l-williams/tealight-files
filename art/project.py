@@ -12,7 +12,7 @@ current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
 current_x = 77
 current_y = 412
-
+current_velocity = 0
 
 def handle_keydown(key):
   global rotating
@@ -25,6 +25,9 @@ def handle_keydown(key):
     elif data['key'] == "right":
       rotating = 2
       print rotating
+  data = movement_handle_keydown(key, current_velocity)
+  if data is not None:
+    current_velocity = data['speed']
       
 def handle_keyup(key):
   global rotating
@@ -44,7 +47,7 @@ def handle_frame():
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
   draw_triangle(current_x,current_y,current_direction,10,"red")
-  
+  print current_velocity
   previous_direction = current_direction
 
 
