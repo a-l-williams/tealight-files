@@ -57,24 +57,25 @@ def handle_frame():
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
-  if accelerating == 0:
-    current_velocity -= 0.1
-    print "The velocity is now", current_velocity
-  elif current_velocity > 0 and current_velocity <= 0.1:
-    current_velocity = 0
-  elif current_velocity < 0:
-    current_velocity += 0.1
-  current_x = movement_data['x']
-  current_y = movement_data['y']
-  if accelerating == 1:
-    data = movement_handle_keydown("up", current_velocity)
-    if data is not None:
-      current_velocity = data['speed']
-    else:
-      print "You LOST!"
-  draw_triangle(current_x,current_y,current_direction,current_size,"red")
-  #print current_velocity
-  previous_direction = current_direction
+  if "losing" in movement_data:
+    print "LOSE!"
+  else:
+    if accelerating == 0:
+      current_velocity -= 0.1
+      print "The velocity is now", current_velocity
+    elif current_velocity > 0 and current_velocity <= 0.1:
+      current_velocity = 0
+    elif current_velocity < 0:
+      current_velocity += 0.1
+    current_x = movement_data['x']
+    current_y = movement_data['y']
+    if accelerating == 1:
+      data = movement_handle_keydown("up", current_velocity)
+      if data is not None:
+        current_velocity = data['speed']
+    draw_triangle(current_x,current_y,current_direction,current_size,"red")
+    #print current_velocity
+    previous_direction = current_direction
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
