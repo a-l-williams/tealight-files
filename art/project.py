@@ -49,6 +49,8 @@ def handle_frame():
   movement_data = movement(current_x, current_y, current_velocity, current_direction)
   if current_velocity >= 0.1:
     current_velocity -= 0.1
+  else:
+    current_velocity = 0
   current_x = movement_data['x']
   current_y = movement_data['y']
   draw_triangle(current_x,current_y,current_direction,10,"red")
