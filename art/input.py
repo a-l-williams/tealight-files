@@ -1,2 +1,2 @@
-import uuid
-print uuid.hex()
+import tealight.utils
+print utils.now()
