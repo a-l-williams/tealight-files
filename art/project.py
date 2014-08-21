@@ -7,4 +7,4 @@ from tealight.art import *
 #draw_triangle(200,200,60,200,"blue")
 
 
-print test_polygon([(500, 500)], [(100,200), (50, 50), (200,100), (150,250)])
+print test_polygon(500, 500, [(100,200), (50, 50), (200,100), (150,250)])
