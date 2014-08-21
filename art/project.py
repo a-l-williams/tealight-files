@@ -1,4 +1,4 @@
-#from github.calintat.art.racetrack import draw_triangle
+from github.calintat.art.racetrack import draw_triangle
 from tealight.art import *
 #from github.lordvile018.art.racetrack import handle_
 #from github.a-l-williams.art.project-globals
@@ -7,4 +7,4 @@ from tealight.art import *
 #draw_triangle(200,200,60,200,"blue")
 
 
-print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
+#print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
