@@ -63,7 +63,8 @@ def handle_frame():
   current_y = movement_data['y']
   if accelerating == 1:
     data = movement_handle_keydown("up", current_velocity)
-    current_velocity = data['speed']
+    if data is not None:
+      current_velocity = data['speed']
   draw_triangle(current_x,current_y,current_direction,10,"red")
   #print current_velocity
   previous_direction = current_direction
