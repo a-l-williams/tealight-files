@@ -1,2 +1,2 @@
 import tealight.utils
-print tealight.utils.now()
+print int(tealight.utils.now())
