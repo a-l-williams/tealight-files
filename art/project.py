@@ -18,7 +18,7 @@ def handle_keydown(key):
 
 def handle_frame():
   
-  draw_triangle(50,50,currentDirection,20,"red")
+  draw_triangle(50,50,current_direction,20,"red")
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
