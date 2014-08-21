@@ -56,6 +56,7 @@ def handle_frame():
     current_y = 412
     current_velociy = 0
     current_direction = 0
+    accelerating = 0
     lose()
   else:
     if accelerating == 0:
