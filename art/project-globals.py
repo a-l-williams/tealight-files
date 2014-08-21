@@ -3,3 +3,7 @@ class Globals:
   def get_connection_string(self):
     return "racetrack-amc"
   
+  
+  
+  
+  
