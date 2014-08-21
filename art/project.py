@@ -4,6 +4,7 @@ from github.lordvile018.art.racetrack import handle_keydown, handle_keyup
 currentDirection = 0
 
 def handle_frame():
+  global currentDirection
   draw_triangle(50,50,currentDirection,20,"red")
 
 
