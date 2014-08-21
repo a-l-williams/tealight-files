@@ -12,6 +12,8 @@ current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
 
 
+def handle_mousemove(x,y):
+  print x,y
 
 def handle_keydown(key):
   global rotating
