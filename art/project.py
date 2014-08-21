@@ -10,10 +10,9 @@ current_direction = 0
 previous_direction = 0
 current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
+current_x = 77
+current_y = 412
 
-
-def handle_mousemove(x,y):
-  print x,y
 
 def handle_keydown(key):
   global rotating
@@ -44,7 +43,7 @@ def handle_frame():
   #print "Current direction is", current_direction
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
-  draw_triangle(200,190,current_direction,10,"red")
+  draw_triangle(current_x,current_y,current_direction,10,"red")
   
   previous_direction = current_direction
 
