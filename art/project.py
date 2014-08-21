@@ -4,6 +4,8 @@ from tealight.utils import github_load
 x = github_load("a-l-williams", "art", "project-globals")
 y = x.Globals()
 print y.get_connection_string()
+
+
 currentDirection = 0
 
 def handle_frame():
