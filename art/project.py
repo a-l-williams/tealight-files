@@ -1,4 +1,4 @@
-from github.calintat.art.racetrack import draw_triangle
+#from github.calintat.art.racetrack import draw_triangle
 from tealight.art import *
 from github.lordvile018.art.racetrack import handle_keydown, handle_keyup
 #from github.a-l-williams.art.project-globals
