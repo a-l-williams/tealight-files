@@ -43,7 +43,7 @@ def handle_keyup(key):
       accelerating = 0
       
 def handle_frame():
-  global current_direction, previous_direction, current_x, current_y, current_velocity
+  global current_direction, previous_direction, current_x, current_y, current_velocity, accelerating
   #print "Previous direction is", previous_direction
   if rotating == 1:
     current_direction -= 5
