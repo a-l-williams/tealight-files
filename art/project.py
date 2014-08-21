@@ -29,7 +29,7 @@ def handle_keydown(key):
 
   if key == "up":
     accelerating = 1
-    print "Key down up!
+    print "Key down up!"
   else:
     accelerating = 2
       
