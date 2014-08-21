@@ -36,12 +36,12 @@ def handle_keyup(key):
       
 def handle_frame():
   global current_direction, previous_direction
-  print "Previous direction is", previous_direction
+  #print "Previous direction is", previous_direction
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
     current_direction += 5
-  print "Current direction is", current_direction
+  #print "Current direction is", current_direction
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
   draw_triangle(200,190,current_direction,10,"red")
