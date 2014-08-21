@@ -18,7 +18,7 @@ current_size = 10
 
 def lose():
   print "You lost"
-
+  draw_track()
 def handle_keydown(key):
   global rotating, current_velocity, accelerating
   previous_direction = current_direction
