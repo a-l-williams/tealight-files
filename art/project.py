@@ -37,7 +37,7 @@ def handle_keyup(key):
       rotating = 0
       
 def handle_frame():
-  global current_direction, previous_direction
+  global current_direction, previous_direction, current_x, current_y
   #print "Previous direction is", previous_direction
   if rotating == 1:
     current_direction -= 5
