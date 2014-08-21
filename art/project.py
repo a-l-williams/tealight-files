@@ -3,7 +3,6 @@ from tealight.utils import github_load
 project_globals = github_load("a-l-williams", "art", "project-globals")
 key_handlers = github_load("lordvile018", "art", "racetrack")
 track_handlers = github_load("calintat", "art", "racetrack")
-print track_handlers
 y = project_globals.Globals()
 print y.get_connection_string()
 
