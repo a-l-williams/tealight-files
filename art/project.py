@@ -18,7 +18,7 @@ def handle_keydown(key):
   global rotating
   previous_direction = current_direction
   data = key_handlers.direction_handle_keydown(key, current_direction)
-  if "key" in data:
+  if data is not None andf "key" in data:
     if data['key'] == "left":
       rotating = 1
       print rotating
