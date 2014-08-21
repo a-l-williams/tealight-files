@@ -16,6 +16,9 @@ current_y = 412
 current_velocity = 0
 current_size = 10
 
+def lose():
+  print "You lost"
+
 def handle_keydown(key):
   global rotating, current_velocity, accelerating
   previous_direction = current_direction
