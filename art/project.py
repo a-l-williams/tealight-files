@@ -34,7 +34,7 @@ def handle_keydown(key):
     accelerating = 2
       
 def handle_keyup(key):
-  global rotating
+  global rotating, accelerating
   data = key_handlers.direction_handle_keyup(key, current_direction)
   if "key" in data:
     if data['key'] == "left" or data['key'] == "right":
