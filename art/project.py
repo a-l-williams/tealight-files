@@ -43,6 +43,7 @@ def handle_frame():
   print "Current direction is", current_direction
   draw_triangle(50,50,previous_direction,20,"white")
   draw_triangle(50,50,current_direction,20,"red")
+  previous_direction = current_direction
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
