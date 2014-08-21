@@ -3,10 +3,12 @@ from github.lordvile018.art.racetrack import handle_keydown, handle_keyup
 from tealight.utils import github_load
 x = github_load("a-l-williams", "art", "project-globals")
 y = x.Globals()
+currentDirection = 0
 print y.get_connection_string()
 
 
-currentDirection = 0
+def handle_keydown(key):
+  print "todo"
 
 def handle_frame():
   global currentDirection
