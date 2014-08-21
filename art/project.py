@@ -42,7 +42,7 @@ def handle_frame():
     current_direction += 5
   print "Current direction is", current_direction
   draw_triangle(50,50,previous_direction,20,"white")
-  draw_triangle(50,50,current_direction,20,"black")
+  draw_triangle(50,50,current_direction,20,"red")
   previous_direction = current_direction
 
 
