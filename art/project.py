@@ -70,6 +70,8 @@ def handle_frame():
     data = movement_handle_keydown("up", current_velocity)
     if data is not None:
       current_velocity = data['speed']
+    else:
+      print "You LOST!"
   draw_triangle(current_x,current_y,current_direction,current_size,"red")
   #print current_velocity
   previous_direction = current_direction
