@@ -53,7 +53,7 @@ def handle_frame():
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
   movement_data = movement(current_x, current_y, current_velocity, current_direction)
-  if accelerating == 0 and current_velocity >= 0:
+  if accelerating == 0:
     current_velocity -= 0.1
     print "The velocity is now", current_velocity
   elif current_velocity > 0 and current_velocity <= 0.1:
