@@ -52,7 +52,7 @@ def handle_frame():
   current_x = movement_data['x']
   current_y = movement_data['y']
   draw_triangle(current_x,current_y,current_direction,10,"red")
-  print current_velocity
+  #print current_velocity
   previous_direction = current_direction
 
 
