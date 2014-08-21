@@ -26,6 +26,7 @@ def handle_keydown(key):
       print rotating
       
 def handle_keyup(key):
+  background("track.png")
   global rotating
   data = key_handlers.direction_handle_keyup(key, current_direction)
   if "key" in data:
@@ -40,7 +41,7 @@ def handle_frame():
   elif rotating == 2:
     current_direction += 5
   print "Current direction is", current_direction
-  background("track.png")
+  
   #draw_triangle(100,80,previous_direction,20,"white")
   draw_triangle(200,180,current_direction,20,"red")
   
