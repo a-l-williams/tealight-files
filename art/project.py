@@ -10,14 +10,27 @@ print y.get_connection_string()
 current_direction = 0
 previous_direction = 0
 current_acceleration = 0
+rotating = 0 # 0 for not, 1 for left, 2 for right
 
 
 
 def handle_keydown(key):
-  global current_direction, previous_direction
+  global rotating
   previous_direction = current_direction
-  current_direction = key_handlers.direction_handle_keydown(key, current_direction)
-
+  data = key_handlers.direction_handle_keydown(key, current_direction)
+  if "key" in data:
+    if data['key'] == "left":
+      rotating = 1
+    elif data['key'] == "right":
+      rotating = 2
+      
+def handle_keyup(key):
+  global rotating
+  data = key_handlers.direction_handle_keyup(key, current_direction)
+  if "key" in data:
+    if data['key'] == "left" or data['key'] == "right":
+      rotating = 0
+      
 def handle_frame():
   global current_direction, previous_direction
   print "Previous direction is", previous_direction
