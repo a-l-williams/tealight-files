@@ -13,6 +13,7 @@ current_acceleration = 0
 
 
 def handle_keydown(key):
+  global current_direction
   current_direction = key_handlers.direction_handle_keydown(key, current_direction)
 
 def handle_frame():
