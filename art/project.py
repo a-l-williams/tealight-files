@@ -1,5 +1,5 @@
 from github.calintat.art.racetrack import draw_triangle
-from tealight.art import polygon
+from tealight.art import *
 #from github.a-l-williams.art.project-globals
 #print Globals().get_connection_string()
 
