@@ -56,7 +56,7 @@ def handle_frame():
     current_y = 412
   else:
     if accelerating == 0:
-      current_velocity -= 0.1
+      #current_velocity -= 0.1
       print "The velocity is now", current_velocity
     elif current_velocity > 0 and current_velocity <= 0.1:
       current_velocity = 0
