@@ -47,6 +47,8 @@ def handle_frame():
   draw_track()
   #draw_triangle(100,80,previous_direction,20,"white")
   movement_data = movement(current_x, current_y, current_velocity, current_direction)
+  if current_velocity >= 1:
+    current_velocity *= 0.9
   current_x = movement_data['x']
   current_y = movement_data['y']
   draw_triangle(current_x,current_y,current_direction,10,"red")
