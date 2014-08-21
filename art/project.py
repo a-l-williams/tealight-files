@@ -55,6 +55,7 @@ def handle_frame():
   movement_data = movement(current_x, current_y, current_velocity, current_direction)
   if accelerating == 0 and current_velocity >= 0:
     current_velocity -= 0.1
+    print "The velocity is now", current_velocity
   elif current_velocity > 0 and current_velocity <= 0.1:
     current_velocity = 0
   elif current_velocity < 0:
