@@ -26,11 +26,8 @@ def handle_keydown(key):
   if data is not None and "key" in data:
     if data['key'] == "left":
       rotating = 1
-      print rotating
     elif data['key'] == "right":
       rotating = 2
-      print rotating
-
   if key == "up":
     accelerating = 1
     print "Key down up!"
@@ -48,17 +45,15 @@ def handle_keyup(key):
       
 def handle_frame():
   global current_direction, previous_direction, current_x, current_y, current_velocity, accelerating
-  #print "Previous direction is", previous_direction
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
     current_direction += 5
-  #print "Current direction is", current_direction
   draw_track()
-  #draw_triangle(100,80,previous_direction,20,"white")
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   if "losing" in movement_data:
-    print "LOSE!"
+    current_x = 77
+    current_y = 412
   else:
     if accelerating == 0:
       current_velocity -= 0.1
@@ -74,7 +69,6 @@ def handle_frame():
       if data is not None:
         current_velocity = data['speed']
     draw_triangle(current_x,current_y,current_direction,current_size,"red")
-    #print current_velocity
     previous_direction = current_direction
 
 
