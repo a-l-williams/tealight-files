@@ -19,7 +19,8 @@ def handle_keydown(key):
   current_direction = key_handlers.direction_handle_keydown(key, current_direction)
 
 def handle_frame():
-  
+  print "Previous direction is", previous_direction
+  print "Current direction is", current_direction
   draw_triangle(50,50,previous_direction,20,"white")
   draw_triangle(50,50,current_direction,20,"red")
 
