@@ -1,17 +1,23 @@
 from github.calintat.art.racetrack import draw_triangle
 from github.lordvile018.art.racetrack import handle_keydown, handle_keyup
 from tealight.utils import github_load
-x = github_load("a-l-williams", "art", "project-globals")
-y = x.Globals()
-currentDirection = 0
+project_globals = github_load("a-l-williams", "art", "project-globals")
+key_handlers = github_load("lordvile018", "art", "racetrack")
+
+y = project_globals.Globals()
 print y.get_connection_string()
 
 
+current_direction = 0
+current_acceleration = 0
+
+
+
 def handle_keydown(key):
-  print "todo"
+  current_direction =key_handlers.direction_handle_keydown(key, current_direction)
 
 def handle_frame():
-  global currentDirection
+  
   draw_triangle(50,50,currentDirection,20,"red")
 
 
