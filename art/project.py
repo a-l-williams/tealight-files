@@ -40,8 +40,8 @@ def handle_frame():
   elif rotating == 2:
     current_direction += 5
   print "Current direction is", current_direction
-  draw_triangle(50,50,previous_direction,20,"white")
-  draw_triangle(50,50,current_direction,20,"red")
+  draw_triangle(100,80,previous_direction,20,"white")
+  draw_triangle(100,80,current_direction,20,"red")
   previous_direction = current_direction
 
 
