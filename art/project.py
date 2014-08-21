@@ -5,4 +5,5 @@ from tealight.art import *
 
 #draw_triangle(200,200,60,200,"blue")
 
-fill_polygon([(100,100), (200,100), (150,250)])
+
+print test_polygon(110,110, [(100,100), (200,100), (150,250)])
