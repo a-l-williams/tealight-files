@@ -15,7 +15,7 @@ current_y = 412
 current_velocity = 0
 
 def handle_keydown(key):
-  global rotating
+  global rotating, current_velocity
   previous_direction = current_direction
   data = key_handlers.direction_handle_keydown(key, current_direction)
   if data is not None and "key" in data:
