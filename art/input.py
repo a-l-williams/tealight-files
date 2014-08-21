@@ -1,2 +1,3 @@
 import tealight.utils
-print int(tealight.utils.now())
+import random
+print int(tealight.utils.now() + random.randint(0,1000))
