@@ -14,10 +14,11 @@ current_acceleration = 0
 
 def handle_keydown(key):
   global current_direction
+  previous_direction = current_direction
   current_direction = key_handlers.direction_handle_keydown(key, current_direction)
 
 def handle_frame():
-  
+  draw_triangle(50,50,previous_direction,20,"white")
   draw_triangle(50,50,current_direction,20,"red")
 
 
