@@ -37,14 +37,12 @@ def handle_frame():
   global current_direction, previous_direction
   print "Previous direction is", previous_direction
   if rotating == 1:
-    draw_triangle(50,50,current_direction,20,"white")
     current_direction -= 5
   elif rotating == 2:
-    draw_triangle(50,50,current_direction,20,"white")
     current_direction += 5
   print "Current direction is", current_direction
-  
-  draw_triangle(50,50,current_direction,20,"red")
+  draw_triangle(50,50,previous_direction,20,"white")
+  draw_triangle(50,50,current_direction,20,"black")
   previous_direction = current_direction
 
 
