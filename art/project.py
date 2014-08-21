@@ -54,6 +54,7 @@ def handle_frame():
   if "losing" in movement_data:
     current_x = 77
     current_y = 412
+    lose()
   else:
     if accelerating == 0:
       #current_velocity -= 0.1
