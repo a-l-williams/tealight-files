@@ -21,8 +21,10 @@ def handle_keydown(key):
   if "key" in data:
     if data['key'] == "left":
       rotating = 1
+      print rotating
     elif data['key'] == "right":
       rotating = 2
+      print rotating
       
 def handle_keyup(key):
   global rotating
