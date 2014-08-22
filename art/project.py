@@ -64,7 +64,7 @@ def handle_frame():
     color("white")
     print "winner"
     text(5,20,"You win!")
-    sleep(99999)
+    #sleep(99999)
     
   if "losing" in movement_data:
     current_x = 77
