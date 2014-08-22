@@ -60,10 +60,11 @@ def handle_frame():
   text(5,5,"Score: " + str(score))
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   
-  if check_finish(current_x, current_y) == False:
+  if check_finish(current_x, current_y) == True:
     color("white")
     print "winner"
     text(5,20,"You win!")
+    current_velocity = -900
     #sleep(99999)
     
   if "losing" in movement_data:
