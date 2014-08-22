@@ -61,7 +61,7 @@ def handle_frame():
     current_direction += 5
   draw_track()
   color("white")
-  text(25,20,"RACETRACK")
+  text(50,20,"RACETRACK")
   color("white")
   text(5,5,"Score: " + str(score))
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
