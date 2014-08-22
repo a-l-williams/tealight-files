@@ -21,6 +21,7 @@ current_size = 10
 score = 0
 
 def lose():
+  global score
   print "You lost"
   score = 0
   draw_track()
