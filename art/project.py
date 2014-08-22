@@ -61,8 +61,8 @@ def handle_frame():
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   
   if check_finish(current_x, current_y):
-    print "You won!"
-    sleep(999)
+    text(5,20,"You win!")
+    sleep(99999)
     
   if "losing" in movement_data:
     current_x = 77
