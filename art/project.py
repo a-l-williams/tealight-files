@@ -84,7 +84,7 @@ def handle_frame():
         current_velocity = data['speed']
     draw_triangle(current_x,current_y,current_direction,current_size,"red")
     previous_direction = current_direction
-  if accelerating > 0 and now()- last_sent > 1:
+  if accelerating > 0 and now()- last_sent > 0.5:
     last_sent = now()
     score += 1
 
