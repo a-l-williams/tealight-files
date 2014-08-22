@@ -95,7 +95,7 @@ def handle_frame():
     current_x = movement_data['x']
     current_y = movement_data['y']
     if current_velocity > 0:
-      network_client.authenticated_send({"x": current_x, "y": current_y}, "all", "position")
+      network_client.authenticated_send({"x": current_x, "y": current_y, "d": current_direction}, "all", "position")
     if accelerating == 1:
       data = movement_handle_keydown("up", current_velocity)
       if data is not None:
