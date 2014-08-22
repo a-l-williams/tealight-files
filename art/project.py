@@ -49,7 +49,7 @@ def handle_frame():
     current_direction -= 5
   elif rotating == 2:
     current_direction += 5
-  #draw_track()
+  draw_track()
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   if "losing" in movement_data:
     current_x = 77
