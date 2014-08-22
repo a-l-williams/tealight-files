@@ -17,6 +17,7 @@ current_x = 77
 current_y = 412
 current_velocity = 0
 current_size = 10
+score = 0
 
 def lose():
   print "You lost"
@@ -53,7 +54,7 @@ def handle_frame():
     current_direction += 5
   draw_track()
   color("white")
-  text(0,0,"TEST")
+  text(5,5,"Score: " + str(score))
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   if "losing" in movement_data:
     current_x = 77
@@ -81,6 +82,7 @@ def handle_frame():
         current_velocity = data['speed']
     draw_triangle(current_x,current_y,current_direction,current_size,"red")
     previous_direction = current_direction
+  score += 1
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
