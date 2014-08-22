@@ -90,6 +90,8 @@ def handle_frame():
     score += 1
   if now() - last_sent > 5:
     network_client.client_handle_frame()
+    last_sent = now()
+
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
