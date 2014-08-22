@@ -21,6 +21,8 @@ current_velocity = 0
 current_size = 10
 score = 0
 
+prev_data = {}
+
 def lose():
   global score
   text(5,20,"You lose!")
@@ -53,7 +55,7 @@ def handle_keyup(key):
       
 def handle_frame():
   
-  global last_hb_sent, last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
+  global prev_data, last_hb_sent, last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
   
   if rotating == 1:
     current_direction -= 5
@@ -94,8 +96,11 @@ def handle_frame():
       current_velocity += 0.1
     current_x = movement_data['x']
     current_y = movement_data['y']
-    if current_velocity > 0:
-      network_client.authenticated_send({"x": current_x, "y": current_y, "d": current_direction}, "all", "position")
+    
+    data = {"x": current_x, "y": current_y, "d": current_direction}
+    if data != prev_data:
+      network_client.authenticated_send(data, "all", "position")
+      prev_data = data
     if accelerating == 1:
       data = movement_handle_keydown("up", current_velocity)
       if data is not None:
