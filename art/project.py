@@ -62,8 +62,9 @@ def handle_frame():
   
   if check_finish(current_x, current_y) == True:
     color("white")
-    print "winner"
     text(5,20,"You win!")
+    current_x = 77
+    current_y = 412
     current_velocity = -900
     #sleep(99999)
     
