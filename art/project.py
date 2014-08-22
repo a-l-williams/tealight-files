@@ -10,6 +10,7 @@ print y.get_connection_string()
 draw_track()
 current_direction = 0
 last_sent = now()
+last_hb_sent = now()
 previous_direction = 0
 current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
@@ -99,9 +100,9 @@ def handle_frame():
   if accelerating > 0 and now()- last_sent > 0.5:
     last_sent = now()
     score += 1
-  if now() - last_sent > 2:
+  if now() - last_hb_sent > 2:
     network_client.client_handle_frame()
-    last_sent = now()
+    last_hb_sent = now()
 
 
 
