@@ -51,7 +51,6 @@ def handle_keyup(key):
 def handle_frame():
   
   global last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
-  network_client.client_handle_frame(last_sent)
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
@@ -89,6 +88,8 @@ def handle_frame():
   if accelerating > 0 and now()- last_sent > 0.5:
     last_sent = now()
     score += 1
+  if now() - last_sent > 5:
+    network_client.client_handle_frame()
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
