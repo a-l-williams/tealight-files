@@ -9,6 +9,7 @@ print y.get_connection_string()
 
 draw_track()
 current_direction = 0
+last_sent = tealight.utils.now()
 previous_direction = 0
 current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
@@ -47,7 +48,7 @@ def handle_keyup(key):
       
 def handle_frame():
   
-  global score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
+  global last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
@@ -82,7 +83,9 @@ def handle_frame():
         current_velocity = data['speed']
     draw_triangle(current_x,current_y,current_direction,current_size,"red")
     previous_direction = current_direction
-  score += 1
+  if accelerating > 0 and tealight.utils.now()- last_sent > 1:
+    last_sent = tealight.utils.now()
+    score += 1
 
 
 #print test_polygon(100, 100, [(100,200), (50, 50), (200,100), (150,250)])
