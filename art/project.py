@@ -22,6 +22,7 @@ score = 0
 
 def lose():
   print "You lost"
+  score = 0
   draw_track()
 def handle_keydown(key):
   global rotating, current_velocity, accelerating
