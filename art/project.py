@@ -52,14 +52,16 @@ def handle_keyup(key):
       accelerating = 0
       
 def handle_frame():
-  color("white")
-  text(25,20,"RACETRACK")
+  
   global last_hb_sent, last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
+  
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
     current_direction += 5
   draw_track()
+  color("white")
+  text(25,20,"RACETRACK")
   color("white")
   text(5,5,"Score: " + str(score))
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
