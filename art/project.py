@@ -1,3 +1,7 @@
+# Main project file
+# Written by Adam,        Matt  and     Calin
+# GH:        a-l-williams, lordvile018  calintat
+# I apologise for the global variables and general mess
 from github.calintat.art.racetrack import *
 from tealight.utils import github_load, now, sleep
 project_globals = github_load("a-l-williams", "art", "project-globals")
