@@ -62,6 +62,7 @@ def handle_frame():
   
   if check_finish(current_x, current_y) == False:
     color("white")
+    print "winner"
     text(5,20,"You win!")
     sleep(99999)
     
