@@ -51,7 +51,7 @@ def handle_keyup(key):
 def handle_frame():
   
   global last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
-  client_handle_frame(last_sent)
+  network_client.client_handle_frame(last_sent)
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
