@@ -1,5 +1,5 @@
 from github.calintat.art.racetrack import *
-from tealight.utils import github_load
+from tealight.utils import github_load, now
 project_globals = github_load("a-l-williams", "art", "project-globals")
 key_handlers = github_load("lordvile018", "art", "racetrack")
 network_client = github_load("lordvile018", "art", "racetrackclient")
