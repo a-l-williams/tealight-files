@@ -100,7 +100,7 @@ def handle_frame():
   if accelerating > 0 and now()- last_sent > 0.5:
     last_sent = now()
     score += 1
-  if now() - last_hb_sent > 2:
+  if now() - last_hb_sent > 5:
     network_client.client_handle_frame()
     last_hb_sent = now()
 
