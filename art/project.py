@@ -22,7 +22,7 @@ score = 0
 
 def lose():
   global score
-  print "You lost"
+  network_client.authenticated_send({"state": "lose"}, "server", "status")
   score = 0
   draw_track()
 def handle_keydown(key):
@@ -63,6 +63,7 @@ def handle_frame():
   if check_finish(current_x, current_y) == True:
     color("white")
     text(5,20,"You win!")
+    network_client.authenticated_send({"state": "win"}, "server", "status")
     current_x = 77
     current_y = 412
     current_velocity = -900
