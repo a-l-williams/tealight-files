@@ -31,7 +31,7 @@ def handle_keydown(key):
   if key == "up":
     accelerating = 1
     print "Key down up!"
-  else:
+  elif key == "space":
     accelerating = 2
       
 def handle_keyup(key):
@@ -61,7 +61,11 @@ def handle_frame():
     lose()
   else:
     if accelerating == 0:
-      #current_velocity -= 0.1
+      if current_velocity <= 0.1:
+        current_velocity = 0
+      else:
+        current_velocity *= 0.95
+      
       print "The velocity is now", current_velocity
     elif current_velocity > 0 and current_velocity <= 0.1:
       current_velocity = 0
