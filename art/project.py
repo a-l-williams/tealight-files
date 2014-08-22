@@ -45,13 +45,14 @@ def handle_keyup(key):
       accelerating = 0
       
 def handle_frame():
-  text(0,0,"TEST")
+  
   global current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
   if rotating == 1:
     current_direction -= 5
   elif rotating == 2:
     current_direction += 5
   draw_track()
+  text(0,0,"TEST")
   movement_data = movement(current_x, current_y, current_velocity, current_direction, current_size)
   if "losing" in movement_data:
     current_x = 77
