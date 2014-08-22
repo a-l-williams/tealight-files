@@ -46,6 +46,7 @@ def handle_keydown(key):
 
     
 def handle_message(message):
+  print "Got message"
   if message['type'] == "position":
     color("red")
     spot(message['payload']['x'], message['payload']['y'], 5)
