@@ -66,7 +66,6 @@ def handle_frame():
     current_x = 77
     current_y = 412
     current_velocity = -900
-    #sleep(99999)
     
   if "losing" in movement_data:
     current_x = 77
