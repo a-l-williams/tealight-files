@@ -52,7 +52,7 @@ def handle_keyup(key):
       accelerating = 0
       
 def handle_frame():
-  
+  text(25,20,"RACETRACK")
   global last_hb_sent, last_sent, score, current_direction, previous_direction, current_x, current_y, current_velocity, accelerating, rotating
   if rotating == 1:
     current_direction -= 5
