@@ -43,7 +43,13 @@ def handle_keydown(key):
     accelerating = 1
   elif key == "space":
     accelerating = 2
-      
+
+    
+def handle_message(message):
+  if message['type'] == "position":
+    color("red")
+    spot(message['payload']['x'], message['payload']['y'], 5)
+  
 def handle_keyup(key):
   global rotating, accelerating
   data = key_handlers.direction_handle_keyup(key, current_direction)
