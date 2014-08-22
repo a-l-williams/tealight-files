@@ -9,7 +9,7 @@ print y.get_connection_string()
 
 draw_track()
 current_direction = 0
-last_sent = tealight.utils.now()
+last_sent = now()
 previous_direction = 0
 current_acceleration = 0
 rotating = 0 # 0 for not, 1 for left, 2 for right
@@ -83,8 +83,8 @@ def handle_frame():
         current_velocity = data['speed']
     draw_triangle(current_x,current_y,current_direction,current_size,"red")
     previous_direction = current_direction
-  if accelerating > 0 and tealight.utils.now()- last_sent > 1:
-    last_sent = tealight.utils.now()
+  if accelerating > 0 and now()- last_sent > 1:
+    last_sent = now()
     score += 1
 
 
