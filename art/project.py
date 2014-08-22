@@ -66,9 +66,7 @@ def handle_frame():
       if current_velocity <= 0.1:
         current_velocity = 0
       else:
-        current_velocity *= 0.95
-      
-      print "The velocity is now", current_velocity
+        current_velocity *= 0.95    
     elif current_velocity > 0 and current_velocity <= 0.1:
       current_velocity = 0
     elif current_velocity < 0:
