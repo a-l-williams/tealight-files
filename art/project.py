@@ -22,6 +22,8 @@ score = 0
 
 def lose():
   global score
+  text(5,20,"You lose!")
+
   network_client.authenticated_send({"state": "lose"}, "server", "status")
   score = 0
   draw_track()
