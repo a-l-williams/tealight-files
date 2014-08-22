@@ -1,5 +1,5 @@
 from github.calintat.art.racetrack import *
-from tealight.utils import github_load, now
+from tealight.utils import github_load, now, sleep
 project_globals = github_load("a-l-williams", "art", "project-globals")
 key_handlers = github_load("lordvile018", "art", "racetrack")
 network_client = github_load("lordvile018", "art", "racetrackclient")
@@ -62,7 +62,8 @@ def handle_frame():
   
   if check_finish(current_x, current_y):
     print "You won!"
-  
+    sleep(999)
+    
   if "losing" in movement_data:
     current_x = 77
     current_y = 412
