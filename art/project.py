@@ -32,7 +32,6 @@ def handle_keydown(key):
       rotating = 2
   if key == "up":
     accelerating = 1
-    print "Key down up!"
   elif key == "space":
     accelerating = 2
       
